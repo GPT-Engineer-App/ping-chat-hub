@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Container, VStack, Text, Input, Button, Box, HStack, Avatar, IconButton, Image, useToast } from "@chakra-ui/react";
+import { Container, VStack, Text, Input, Button, Box, HStack, Avatar, IconButton, Image, useToast, Link } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { FaRocket, FaUserPlus, FaQrcode, FaLink, FaFileUpload } from "react-icons/fa";
 
 const Index = () => {
@@ -49,6 +50,9 @@ const Index = () => {
             <Button onClick={handleSendOtp}>Send OTP</Button>
             <Input placeholder="Enter OTP" value={otp} onChange={(e) => setOtp(e.target.value)} />
             <Button onClick={handleLogin}>Login</Button>
+            <Button as={RouterLink} to="/profile">
+              Go to Profile
+            </Button>
           </>
         ) : (
           <>
