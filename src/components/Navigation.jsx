@@ -10,6 +10,9 @@ const Navigation = () => {
       <Button as={Link} to="/profile">
         Profile
       </Button>
+      <Button as={Link} to="/chat">
+        Chat
+      </Button>
     </HStack>
   );
 };
